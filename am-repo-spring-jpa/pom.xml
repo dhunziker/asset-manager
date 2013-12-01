@@ -28,7 +28,7 @@
 	<dependencies>
 		<!-- Dependencies -->
 		<dependency>
-			<groupId>asset-manager</groupId>
+			<groupId>uk.co.hunziker</groupId>
 			<artifactId>am-model-jpa21</artifactId>
 			<version>${am-model-jpa21.version}</version>
 			<exclusions>
