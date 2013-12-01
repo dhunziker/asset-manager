@@ -24,8 +24,9 @@
 		<!-- Test Dependencies -->
 		<junit.version>4.11</junit.version>
 	</properties>
-	<!-- Dependencies -->
+
 	<dependencies>
+		<!-- Dependencies -->
 		<dependency>
 			<groupId>asset-manager</groupId>
 			<artifactId>am-model-jpa21</artifactId>
