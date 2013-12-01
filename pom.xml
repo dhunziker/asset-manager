@@ -12,7 +12,9 @@
 
 	<modules>
 		<module>am-util</module>
-		<module>am-model-jpa21</module>
+		<module>am-shell</module>
+		<module>am-model-plain-jpa</module>
+		<module>am-repo-plain-jpa</module>
 		<module>am-repo-spring-jpa</module>
 	</modules>
 

@@ -16,7 +16,7 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 
 		<!-- Dependencies -->
-		<am-model-jpa21.version>1.0-SNAPSHOT</am-model-jpa21.version>
+		<am-model-plain-jpa.version>1.0-SNAPSHOT</am-model-plain-jpa.version>
 		<log4j.version>2.0-beta9</log4j.version>
 
 		<!-- Test Dependencies -->
@@ -26,9 +26,9 @@
 	<dependencies>
 		<!-- Dependencies -->
 		<dependency>
-			<groupId>asset-manager</groupId>
-			<artifactId>am-model-jpa21</artifactId>
-			<version>${am-model-jpa21.version}</version>
+			<groupId>uk.co.hunziker</groupId>
+			<artifactId>am-model-plain-jpa</artifactId>
+			<version>${am-model-plain-jpa.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>log4j-1.2-api</artifactId>
