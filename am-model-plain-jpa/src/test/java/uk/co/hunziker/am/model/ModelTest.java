@@ -8,6 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import uk.co.hunziker.am.openpojo.AbstractProductRandomGenerator;
+import uk.co.hunziker.am.openpojo.GetterMustExistRule;
+import uk.co.hunziker.am.openpojo.SetterMustExistRule;
 
 import com.openpojo.random.RandomFactory;
 import com.openpojo.reflection.PojoClass;
@@ -18,11 +20,9 @@ import com.openpojo.reflection.filters.FilterPackageInfo;
 import com.openpojo.reflection.impl.PojoClassFactory;
 import com.openpojo.validation.PojoValidator;
 import com.openpojo.validation.affirm.Affirm;
-import com.openpojo.validation.rule.impl.GetterMustExistRule;
 import com.openpojo.validation.rule.impl.NoNestedClassRule;
 import com.openpojo.validation.rule.impl.NoPublicFieldsRule;
 import com.openpojo.validation.rule.impl.NoStaticExceptFinalRule;
-import com.openpojo.validation.rule.impl.SetterMustExistRule;
 import com.openpojo.validation.test.impl.DefaultValuesNullTester;
 import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
