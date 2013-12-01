@@ -3,7 +3,7 @@ package uk.co.hunziker.am.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.hunziker.am.repo.PropertyRepository;
-import am.model.jpa21.pojo.Property;
+import uk.co.hunziker.am.model.Property;
 
 public class PropertyRepositoryTest extends AbstractRepositoryTest<PropertyRepository, Property, Long> {
 

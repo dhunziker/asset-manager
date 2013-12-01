@@ -17,7 +17,6 @@
 
 		<!-- Dependencies -->
 		<am-model-plain-jpa.version>1.0-SNAPSHOT</am-model-plain-jpa.version>
-		<log4j.version>2.0-beta9</log4j.version>
 
 		<!-- Test Dependencies -->
 		<junit.version>4.11</junit.version>
@@ -29,22 +28,6 @@
 			<groupId>uk.co.hunziker</groupId>
 			<artifactId>am-model-plain-jpa</artifactId>
 			<version>${am-model-plain-jpa.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>log4j-1.2-api</artifactId>
-					<groupId>org.apache.logging.log4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
 		</dependency>
 
 		<!-- Test Dependencies -->

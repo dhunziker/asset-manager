@@ -2,7 +2,7 @@ package uk.co.hunziker.am.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import am.model.jpa21.pojo.Currency;
+import uk.co.hunziker.am.model.Currency;
 
 public interface CurrencyRepository extends JpaRepository<Currency, Long> {
 

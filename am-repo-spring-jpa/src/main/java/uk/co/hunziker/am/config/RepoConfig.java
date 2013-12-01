@@ -5,6 +5,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,8 +42,9 @@ public class RepoConfig {
 
 	private Properties jpaProperties() {
 		Properties props = new Properties();
-		props.put("eclipselink.weaving", env.getProperty("eclipselink.weaving"));
-		props.put("eclipselink.logging.logger", env.getProperty("eclipselink.logging.logger"));
+		props.put(PersistenceUnitProperties.WEAVING, env.getProperty("eclipselink.weaving"));
+		props.put(PersistenceUnitProperties.LOGGING_LOGGER, env.getProperty("eclipselink.logging.logger"));
+		props.put(PersistenceUnitProperties.LOGGING_LEVEL, env.getProperty("eclipselink.logging.level"));
 		return props;
 	}
 
@@ -52,7 +54,7 @@ public class RepoConfig {
 		factory.setJpaProperties(jpaProperties());
 		factory.setJpaVendorAdapter(new EclipseLinkJpaVendorAdapter());
 		factory.setMappingResources("META-INF/mappings.xml");
-		factory.setPackagesToScan("am.model.jpa21.pojo");
+		factory.setPackagesToScan("uk.co.hunziker.am.model");
 		factory.setDataSource(dataSource());
 		factory.afterPropertiesSet();
 		return factory.getObject();

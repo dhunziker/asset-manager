@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import am.model.jpa21.pojo.marketable.AbstractProduct;
-import am.model.jpa21.pojo.marketable.AbstractProduct_;
-import am.model.jpa21.pojo.marketable.MarketData_;
+import uk.co.hunziker.am.model.marketable.AbstractProduct;
+import uk.co.hunziker.am.model.marketable.AbstractProduct_;
+import uk.co.hunziker.am.model.marketable.MarketData_;
 
 public class ProductRepositoryImpl extends GenericRepositoryImpl<AbstractProduct, Long> implements ProductRepository {
 

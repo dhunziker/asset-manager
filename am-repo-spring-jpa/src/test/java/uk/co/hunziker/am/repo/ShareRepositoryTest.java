@@ -3,7 +3,7 @@ package uk.co.hunziker.am.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.hunziker.am.repo.ShareRepository;
-import am.model.jpa21.pojo.marketable.Share;
+import uk.co.hunziker.am.model.marketable.Share;
 
 public class ShareRepositoryTest extends AbstractRepositoryTest<ShareRepository, Share, Long> {
 

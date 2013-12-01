@@ -2,7 +2,7 @@ package uk.co.hunziker.am.repo;
 
 import javax.persistence.EntityManager;
 
-import am.model.jpa21.pojo.Currency;
+import uk.co.hunziker.am.model.Currency;
 
 public class CurrencyRepositoryImpl extends GenericRepositoryImpl<Currency, Long> implements CurrencyRepository {
 

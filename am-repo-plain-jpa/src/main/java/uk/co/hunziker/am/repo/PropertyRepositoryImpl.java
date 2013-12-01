@@ -7,8 +7,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import am.model.jpa21.pojo.Property;
-import am.model.jpa21.pojo.Property_;
+import uk.co.hunziker.am.model.Property;
+import uk.co.hunziker.am.model.Property_;
 
 public class PropertyRepositoryImpl extends GenericRepositoryImpl<Property, Long> implements PropertyRepository {
 

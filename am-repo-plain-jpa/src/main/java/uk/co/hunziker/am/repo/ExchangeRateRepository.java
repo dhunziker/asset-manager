@@ -1,6 +1,6 @@
 package uk.co.hunziker.am.repo;
 
-import am.model.jpa21.pojo.marketable.ExchangeRate;
+import uk.co.hunziker.am.model.marketable.ExchangeRate;
 
 public interface ExchangeRateRepository extends GenericRepository<ExchangeRate, Long> {
 

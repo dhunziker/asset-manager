@@ -3,7 +3,7 @@ package uk.co.hunziker.am.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.hunziker.am.repo.TransactionRepository;
-import am.model.jpa21.pojo.Transaction;
+import uk.co.hunziker.am.model.Transaction;
 
 public class TransactionRepositoryTest extends AbstractRepositoryTest<TransactionRepository, Transaction, Long> {
 

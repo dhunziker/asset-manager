@@ -2,7 +2,7 @@ package uk.co.hunziker.am.repo;
 
 import java.util.List;
 
-import am.model.jpa21.pojo.Property;
+import uk.co.hunziker.am.model.Property;
 
 public interface PropertyRepository extends GenericRepository<Property, Long> {
 

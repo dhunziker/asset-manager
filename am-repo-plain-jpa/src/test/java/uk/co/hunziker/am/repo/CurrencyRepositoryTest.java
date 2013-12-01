@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import uk.co.hunziker.am.repo.CurrencyRepository;
 import uk.co.hunziker.am.repo.CurrencyRepositoryImpl;
-import am.model.jpa21.pojo.Currency;
+import uk.co.hunziker.am.model.Currency;
 
 public class CurrencyRepositoryTest extends AbstractRepositoryTest<CurrencyRepository, Currency, Long> {
 

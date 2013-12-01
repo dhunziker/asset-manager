@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import uk.co.hunziker.am.repo.PropertyRepository;
 import uk.co.hunziker.am.repo.PropertyRepositoryImpl;
-import am.model.jpa21.pojo.Property;
+import uk.co.hunziker.am.model.Property;
 
 public class PropertyRepositoryTest extends AbstractRepositoryTest<PropertyRepository, Property, Long> {
 

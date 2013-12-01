@@ -3,8 +3,8 @@ package uk.co.hunziker.am.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.hunziker.am.repo.ProductRepository;
-import am.model.jpa21.pojo.marketable.AbstractProduct;
-import am.model.jpa21.pojo.marketable.Option;
+import uk.co.hunziker.am.model.marketable.AbstractProduct;
+import uk.co.hunziker.am.model.marketable.Option;
 
 public class ProductRepositoryTest extends AbstractRepositoryTest<ProductRepository, AbstractProduct, Long> {
 

@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import uk.co.hunziker.am.repo.ExchangeRateRepository;
 import uk.co.hunziker.am.repo.ExchangeRateRepositoryImpl;
-import am.model.jpa21.pojo.marketable.ExchangeRate;
+import uk.co.hunziker.am.model.marketable.ExchangeRate;
 
 public class ExchangeRateRepositoryTest extends AbstractRepositoryTest<ExchangeRateRepository, ExchangeRate, Long> {
 

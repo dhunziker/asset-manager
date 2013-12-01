@@ -1,12 +1,15 @@
 package uk.co.hunziker.am.repo;
 
+import static org.eclipse.persistence.config.PersistenceUnitProperties.LOGGING_LEVEL;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.persistence.EntityManager;
@@ -26,7 +29,7 @@ public abstract class AbstractRepositoryTest<R extends GenericRepository<T, ID>,
 
 	private static final int SAMPLE_SIZE = ThreadLocalRandom.current().nextInt(1, 11);
 
-	private static final String PERSISTENCE_UNIT_NAME = "am-repo-plain-jpa";
+	private static final String PERSISTENCE_UNIT_NAME = "am-model-plain-jpa";
 
 	private static EntityManager em;
 
@@ -44,7 +47,9 @@ public abstract class AbstractRepositoryTest<R extends GenericRepository<T, ID>,
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		em = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME).createEntityManager();
+		Map<String, Object> configOverrides = new HashMap<String, Object>();
+		configOverrides.put(LOGGING_LEVEL, "FINE");
+		em = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME, configOverrides).createEntityManager();
 	}
 
 	@AfterClass

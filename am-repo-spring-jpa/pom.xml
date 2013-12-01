@@ -31,12 +31,6 @@
 			<groupId>uk.co.hunziker</groupId>
 			<artifactId>am-model-plain-jpa</artifactId>
 			<version>${am-model-plain-jpa.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>log4j-1.2-api</artifactId>
-					<groupId>org.apache.logging.log4j</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>

@@ -3,7 +3,7 @@ package uk.co.hunziker.am.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.hunziker.am.repo.ExchangeRateRepository;
-import am.model.jpa21.pojo.marketable.ExchangeRate;
+import uk.co.hunziker.am.model.marketable.ExchangeRate;
 
 public class ExchangeRateRepositoryTest extends AbstractRepositoryTest<ExchangeRateRepository, ExchangeRate, Long> {
 
