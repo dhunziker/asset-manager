@@ -2,38 +2,31 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>uk.co.hunziker</groupId>
+	<parent>
+		<groupId>uk.co.hunziker</groupId>
+		<artifactId>asset-manager</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
 	<artifactId>am-model-plain-jpa</artifactId>
-	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>am-model-plain-jpa</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
-
-		<!-- Dependencies -->
+		<!-- Compiling -->
 		<jpa.version>2.1.0</jpa.version>
 		<eclipse-link.version>2.6.0-SNAPSHOT</eclipse-link.version>
-		<joda-time.version>2.3</joda-time.version>
 		<mysql-connector.version>5.1.21</mysql-connector.version>
 
-		<!-- Test Dependencies -->
-		<junit.version>4.11</junit.version>
+		<!-- Testing -->
 		<openpojo.version>0.4.2</openpojo.version>
-		<log4j.version>2.0-beta9</log4j.version>
-		<jackson.version>2.2.2</jackson.version>
-
-		<build-helper-maven-plugin.version>1.8</build-helper-maven-plugin.version>
-		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
-		<exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
 	</properties>
 
 	<dependencies>
-		<!-- Dependencies -->
+		<!-- Compiling -->
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>javax.persistence</artifactId>
@@ -43,11 +36,6 @@
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>org.eclipse.persistence.jpa</artifactId>
 			<version>${eclipse-link.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${joda-time.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -69,48 +57,11 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Test Dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- Testing -->
 		<dependency>
 			<groupId>com.googlecode.openpojo</groupId>
 			<artifactId>openpojo</artifactId>
 			<version>${openpojo.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Compatibility with openpojo -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-1.2-api</artifactId>
-			<version>${log4j.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>${jackson.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>${jackson.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -120,7 +71,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>${build-helper-maven-plugin.version}</version>
+				<version>1.8</version>
 				<executions>
 					<execution>
 						<id>add-source</id>
@@ -137,19 +88,9 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler-plugin.version}</version>
-				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>${exec-maven-plugin.version}</version>
+				<version>1.2.1</version>
 				<executions>
 					<execution>
 						<id>weave-classes</id>
