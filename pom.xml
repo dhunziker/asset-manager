@@ -16,6 +16,8 @@
 		<module>am-model-plain-jpa</module>
 		<module>am-repo-plain-jpa</module>
 		<module>am-repo-spring-jpa</module>
+		<module>am-market-data</module>
+		<module>am-updater</module>
 	</modules>
 
 	<properties>

@@ -1,0 +1,24 @@
+{
+	"configuration": {
+		"status": "error",
+		"ThresholdFilter": {
+			"level": "info"
+		},
+		"appenders": {
+			"Console": {
+				"name": "STDOUT",
+				"PatternLayout": {
+					"pattern": "%d{ISO8601} [%t] %-5level %logger{1} - %msg%n"
+				}
+			}
+		},
+		"loggers": {
+			"root": {
+				"level": "info",
+				"AppenderRef": {
+					"ref": "STDOUT"
+				}
+			}
+		}
+	}
+}
