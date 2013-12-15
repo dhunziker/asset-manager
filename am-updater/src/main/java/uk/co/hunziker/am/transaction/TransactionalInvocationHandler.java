@@ -23,6 +23,7 @@ public class TransactionalInvocationHandler<T> implements InvocationHandler {
 
 		EntityTransaction trx = em.getTransaction();
 		try {
+			trx.begin();
 			result = method.invoke(proxied, args);
 			trx.commit();
 		} catch (Exception e) {

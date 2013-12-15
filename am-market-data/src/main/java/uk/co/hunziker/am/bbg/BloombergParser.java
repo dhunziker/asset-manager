@@ -12,11 +12,12 @@ import org.joda.time.DateTime;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import uk.co.hunziker.am.QuoteEngine;
 import uk.co.hunziker.am.model.marketable.MarketData;
 import uk.co.hunziker.am.model.marketable.UpdateStatus;
 import uk.co.hunziker.am.util.JodaTimeFormat;
 
-public class BloombergParser {
+public class BloombergParser implements QuoteEngine {
 
 	private static final Logger log = LogManager.getLogger();
 

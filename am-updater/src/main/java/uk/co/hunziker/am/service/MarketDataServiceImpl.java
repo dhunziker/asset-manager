@@ -2,7 +2,7 @@ package uk.co.hunziker.am.service;
 
 import java.util.List;
 
-import uk.co.hunziker.am.bbg.BloombergParser;
+import uk.co.hunziker.am.QuoteEngine;
 import uk.co.hunziker.am.model.marketable.AbstractProduct;
 import uk.co.hunziker.am.model.marketable.ExchangeRate;
 import uk.co.hunziker.am.model.marketable.Option;
@@ -15,9 +15,9 @@ public class MarketDataServiceImpl extends AbstractMarketDataService {
 
 	private ExchangeRateRepository exchangeRateRepository;
 
-	public MarketDataServiceImpl(BloombergParser bbgParser, ProductRepository productRepository,
+	public MarketDataServiceImpl(QuoteEngine quoteEngine, ProductRepository productRepository,
 			ExchangeRateRepository exchangeRateRepository) {
-		super(bbgParser);
+		super(quoteEngine);
 		this.productRepository = productRepository;
 		this.exchangeRateRepository = exchangeRateRepository;
 	}

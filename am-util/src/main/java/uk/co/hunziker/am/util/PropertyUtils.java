@@ -19,7 +19,7 @@ public class PropertyUtils {
 
 	public static Map<String, String> loadProperties(String file) {
 		Map<String, String> props = new HashMap<>();
-		try (InputStream is = ClassLoader.getSystemResourceAsStream(file);
+		try (InputStream is = PropertyUtils.class.getResourceAsStream(file);
 				BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
 			String line;
 			while ((line = br.readLine()) != null) {

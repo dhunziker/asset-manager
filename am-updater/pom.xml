@@ -15,6 +15,10 @@
 	<name>am-updater</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<applications.dir>H:\Applications\</applications.dir>
+	</properties>
+
 	<dependencies>
 		<!-- Compiling -->
 		<dependency>
@@ -58,6 +62,32 @@
 						</configuration>
 						<goals>
 							<goal>one-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<property name="deploy.dir"
+									value="${applications.dir}/${project.artifactId}-${project.version}" />
+								<mkdir dir="${deploy.dir}" />
+								<copy todir="${deploy.dir}" flatten="true" overwrite="true">
+									<fileset dir="${basedir}">
+										<include name="*.sh" />
+										<include name="target/*one-jar.jar" />
+									</fileset>
+								</copy>
+								<fixcrlf srcdir="${deploy.dir}" includes="*.sh" eol="unix"
+									eof="remove" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
 						</goals>
 					</execution>
 				</executions>

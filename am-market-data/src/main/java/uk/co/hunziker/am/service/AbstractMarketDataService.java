@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.message.FormattedMessage;
 
-import uk.co.hunziker.am.bbg.BloombergParser;
+import uk.co.hunziker.am.QuoteEngine;
 import uk.co.hunziker.am.model.marketable.AbstractProduct;
 import uk.co.hunziker.am.model.marketable.ExchangeRate;
 import uk.co.hunziker.am.model.marketable.MarketData;
@@ -19,7 +19,7 @@ public abstract class AbstractMarketDataService implements MarketDataService {
 
 	private static final Logger log = LogManager.getLogger();
 
-	private BloombergParser bbgParser;
+	private QuoteEngine quoteEngine;
 
 	abstract List<AbstractProduct> productsWithSymbols();
 
@@ -27,8 +27,8 @@ public abstract class AbstractMarketDataService implements MarketDataService {
 
 	abstract List<ExchangeRate> allExchangeRates();
 
-	public AbstractMarketDataService(BloombergParser bbgParser) {
-		this.bbgParser = bbgParser;
+	public AbstractMarketDataService(QuoteEngine quoteEngine) {
+		this.quoteEngine = quoteEngine;
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public abstract class AbstractMarketDataService implements MarketDataService {
 
 	@Override
 	public void updateMarketData(Marketable marketable) {
-		marketable.setMarketData(bbgParser.fetchMarketData(marketable.getBbgSymbol()));
+		marketable.setMarketData(quoteEngine.fetchMarketData(marketable.getBbgSymbol()));
 	}
 
 }

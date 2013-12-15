@@ -20,7 +20,7 @@ public class Updater {
 
 	private static final String PERSISTENCE_UNIT_NAME = "am-model-plain-jpa";
 
-	private static final String BLOOMBERG_PROPERTIES = "bloomberg.properties";
+	private static final String BLOOMBERG_PROPERTIES = "/bloomberg.properties";
 
 	private MarketDataService marketDataService;
 
@@ -30,7 +30,7 @@ public class Updater {
 		ExchangeRateRepository exchangeRateRepository = new ExchangeRateRepositoryImpl(em);
 
 		Map<String, String> props = PropertyUtils.loadProperties(BLOOMBERG_PROPERTIES);
-		BloombergParser bbgParser = new BloombergParser(props);
+		QuoteEngine bbgParser = new BloombergParser(props);
 
 		MarketDataService proxied = new MarketDataServiceImpl(bbgParser, productRepository, exchangeRateRepository);
 		marketDataService = (MarketDataService) Proxy.newProxyInstance(getClass().getClassLoader(),
